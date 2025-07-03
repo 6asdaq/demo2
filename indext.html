@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book an Appointment</h1>
+        <form id="bookingForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="date" id="date" required>
+            <input type="time" id="time" required>
+            <button type="submit">Book Now</button>
+        </form>
+        <h2>Bookings</h2>
+        <ul id="bookingList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
