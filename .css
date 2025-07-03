@@ -1,0 +1,65 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #e8f5e9; /* bright light green background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: #ffffff;
+    padding: 20px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #2e7d32; /* dark green heading */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input {
+    padding: 10px;
+    border: 2px solid #a5d6a7; /* light green border */
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button {
+    padding: 10px;
+    background: #43a047; /* green button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+form button:hover {
+    background: #2e7d32; /* dark green on hover */
+}
+
+#bookingList {
+    list-style: none;
+    padding: 0;
+}
+
+#bookingList li {
+    background: #c8e6c9; /* light green item background */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
