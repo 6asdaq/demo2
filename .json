@@ -1,0 +1,37 @@
+const bookingForm = document.getElementById('bookingForm');
+const bookingList = document.getElementById('bookingList');
+
+document.addEventListener('DOMContentLoaded', loadBookings);
+
+bookingForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+
+    if (name === '' || email === '' || date === '' || time === '') return;
+
+    const booking = { name, email, date, time };
+    addBookingToList(booking);
+    saveBooking(booking);
+
+    bookingForm.reset();
+});
+
+function addBookingToList(booking) {
+    const li = document.createElement('li');
+    li.textContent = ${booking.name} (${booking.email}) booked on ${booking.date} at ${booking.time};
+    bookingList.appendChild(li);
+}
+
+function saveBooking(booking) {
+    const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+    bookings.push(booking);
+    localStorage.setItem('bookings', JSON.stringify(bookings));
+}
+
+function loadBookings() {
+    const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+    bookings.forEach(addBookingToList);
+}
